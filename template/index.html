@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}
+ Qr code
+{% endblock title %}
+
+{% block contend %}
+<div class="container cardbox d-flex flex-column  justify-content-start align-items-center">
+<h2 class="p-4"> Generate Your Qr code</h2>
+<div class="input-group  px-5">
+   <form action="" method="post">
+      {% csrf_token %} 
+      <div class="input-group px-5">
+         <input type="text" id="linkform" name="qrcodelink" class="form-control" placeholder="Enter your link here" aria-label="Link to generate QR code for" aria-describedby="generate-button" style="width:16rem;">
+         <button type="submit" class="btn btn-secondary" id="generate-button">Generate QR </button>
+       </div>
+       <div id="qr-code-container" class="mt-3 d-flex flex-column justify-content-center align-items-center">
+         {% if valuename %}
+        <p>{{valuename}}</p> 
+        <a class="qrcodeborder" href="{% static 'images/'%}{{qrcodeimg}}" download="image_filename.jpg">
+         <img class="img-fluid p-4" src="{% static 'images/'%}{{qrcodeimg}}" width="350px" height="350px" alt="my Image">
+          </a>
+          <p class="p-4">click the image to downloade Qr</p>
+         {% endif %}
+      </div>
+   </form>
+ </div>
+</div>
+<script>
+
+
+</script>
+{% endblock contend %}
+
+
+

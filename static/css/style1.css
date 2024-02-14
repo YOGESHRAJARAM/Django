@@ -1,0 +1,28 @@
+body{
+    background-color:rgb(20, 83, 100);
+}
+.cardbox{
+  background-color:rgb(248, 123, 78);
+  max-width: 600px;
+  min-height: 200px;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  border-color:rgb(254, 155, 61) ;
+  border: solid;
+
+}
+.qrcodeborder {
+  border: solid;
+  border-color:rgb(248, 123, 78);
+  border-radius: 10px;
+  transition-property:border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+}
+.qrcodeborder:hover{
+  border-color:rgb(255, 181, 61);
+}
+p{
+  color: rgb(47, 51, 55);
+}
